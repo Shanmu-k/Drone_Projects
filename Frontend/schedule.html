@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Schedule Mission</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      #map {
+        height: 350px;
+        margin-top: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #218838;
+      }
+      #formStatus {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📅 Schedule Drone Mission</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+    </header>
+
+    <main>
+      <form id="missionForm">
+        <label for="farmerName">Farmer Name:</label>
+        <input
+          type="text"
+          id="farmerName"
+          name="farmerName"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="crop">Crop Type:</label>
+        <select id="crop" name="crop" required>
+          <option value="">Select Crop</option>
+          <option value="wheat">Wheat</option>
+          <option value="rice">Rice</option>
+          <option value="tomato">Tomato</option>
+        </select>
+
+        <label for="datetime">Mission Date & Time:</label>
+        <input type="datetime-local" id="datetime" name="datetime" required />
+
+        <label for="drone">Select Drone/Zone:</label>
+        <select id="drone" name="drone" required>
+          <option value="">Select Drone</option>
+          <option value="drone-1">Drone A - Zone 1</option>
+          <option value="drone-2">Drone B - Zone 2</option>
+          <option value="drone-3">Drone C - Zone 3</option>
+        </select>
+
+        <label>Select Field Boundary:</label>
+        <div id="map"></div>
+
+        <!-- Hidden field to store drawn coordinates -->
+        <input type="hidden" id="waypoints" name="waypoints" required />
+
+        <button type="submit">Submit Mission</button>
+      </form>
+
+      <div id="formStatus"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Smart Drone System</p>
+    </footer>
+
+    <!-- Your schedule.js will define initMap() -->
+    <script src="js/schedule.js"></script>
+    <!-- Load Google Maps API async with callback -->
+
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfy4iO6M76m7wDW7qmwOJzr0m_sfPy88&libraries=drawing&callback=initMap"
+    ></script>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+  </body>
+</html>
