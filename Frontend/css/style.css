@@ -1,0 +1,195 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2f855a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c6f6d5;
+}
+
+main {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #2f855a;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Homepage welcome */
+section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+section p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2f855a;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #276749;
+}
+
+/* Form styling */
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: #2f855a;
+  outline: none;
+}
+
+form button {
+  background-color: #2f855a;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #276749;
+}
+
+#formStatus {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: 500;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #2f855a;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+  background-color: #f0fff4;
+}
+
+a.download-link {
+  color: #2b6cb0;
+  text-decoration: underline;
+}
+
+a.download-link:hover {
+  color: #2c5282;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  form, section, table {
+    width: 100%;
+  }
+}
